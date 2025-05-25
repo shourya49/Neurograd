@@ -1,7 +1,6 @@
 
-# micrograd
-A tiny Autograd engine (with a bite! :)). Implements backpropagation (reverse-mode autodiff) over a dynamically built DAG and a small neural networks library on top of it with a PyTorch-like API. Both are tiny, with about 100 and 50 lines of code respectively. The DAG only operates over scalar values, so e.g. we chop up each neuron into all of its individual tiny adds and multiplies. However, this is enough to build up entire deep neural nets doing binary classification, as the demo notebook shows. Potentially useful for educational purposes.
-
+# Neurograd
+This is a small autograd engine, made purely from numpy and python.Implements backpropagation (reverse-mode autodiff) over a dynamically built **Directed Acyclic Graph** where each node in the DAG is a scalar value, and edges represent operations like addition or multiplication .This structure allows the engine to correctly compute gradients by traversing the graph in reverse order. Also a small neural networks library on top of it with a PyTorch-like API.
 ### Installation
 
 ```bash
